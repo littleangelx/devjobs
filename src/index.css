@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Kumbh Sans", sans-serif;
+  font-display: swap;
+  src: url("assets/KumbhSans-VariableFont_YOPQ\,wght.ttf") format("truetype");
+}
+
+:root {
+  --font-family-default: "Kumbh Sans", sans-serif;
+
+  --fs-28: 1.75rem;
+  --fs-24: 1.5rem;
+  --fs-20: 1.25rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+
+  --lh-28: 2.125rem;
+  --lh-24: 1.8125rem;
+  --lh-20: 1.5rem;
+  --lh-14: 1.125rem;
+  --lh-16: 1.625rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+html.light-mode {
+  --clr-main-bg: #f4f6f8;
+  --clr-container: #fff;
+  --clr-primary-200: #5964e0;
+  --clr-primary-100: #939bf4;
+  --clr-main-text: #19202d;
+  --clr-sub-text: #6e8098;
+  --clr-filter-icon: var(--clr-sub-text);
+}
+
+html.dark-mode {
+  --clr-main-bg: #121721;
+  --clr-container: #19202d;
+  --clr-primary-200: #5964e0;
+  --clr-primary-100: #939bf4;
+  --clr-main-text: #fff;
+  --clr-sub-text: #6e8098;
+  --clr-filter-icon: var(--clr-main-text);
+}
+
+body {
+  font-family: var(--font-family-default);
+  background-color: var(--clr-main-bg);
+}
+
+.logo {
+  width: 7.1875rem;
+  height: 2rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle img {
+  height: 1.2rem;
+  aspect-ratio: 1/1;
+}
+
+.container {
+  background-color: var(--clr-main-bg);
+}
+
+.filterContainer {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--clr-container);
+  position: relative;
+  top: -2.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.filterContainer input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.filterContainer input::placeholder {
+  font-size: var(--fs-16);
+  color: var(--clr-sub-text);
+}
+
+.filterIcon {
+  fill: var(--clr-filter-icon);
+}
+
+.card {
+  width: 100%;
+  height: 14.25rem;
+  background-color: var(--clr-container);
+  padding: 0 2rem 1.75rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 3.125rem;
+  aspect-ratio: 1/1;
+  position: relative;
+  top: -1.5625rem;
+}
+
+.card p {
+  color: var(--clr-sub-text);
+  font-size: var(--fs-16);
+}
+
+.card h3 {
+  color: var(--clr-main-text);
+  font-size: var(--fs-20);
+  font-weight: bold;
+}
+
+.dot {
+  background-color: var(--clr-sub-text);
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+}
+
+.location {
+  color: var(--clr-primary-200) !important;
+  font-size: var(--fs-14) !important;
+  font-weight: bold !important;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.customBtn {
+  background-color: var(--clr-primary-200);
+  color: #fff;
+  border-radius: 0.5rem;
+  height: 3rem;
+  border: none;
+}
+
+.filterBar {
+  width: 100%;
+  height: 5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--clr-container);
+  position: relative;
+  top: -2.5rem;
+  display: grid;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.filterOptionContainer:not(:first-child) {
+  border-left: 0.5px solid var(--clr-sub-text);
+}
+
+.filterOptionContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.filterOptionContainer input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+}
+
+.filterOptionContainer input::placeholder {
+  font-size: var(--fs-16);
+  color: var(--clr-sub-text);
+}
+
+.filterCheckbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  accent-color: var(--clr-sub-text);
+}
+
+.fullTimeText {
+  font-weight: bold;
+  color: var(--clr-main-text);
+}
